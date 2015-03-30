@@ -1,4 +1,3 @@
-/** Welcome to John Sampson's GroupMe app for the Pebble Smart Watch */
 
 var UI = require('ui');
 var Vector2 = require('vector2');
@@ -36,7 +35,6 @@ var text = new UI.Text({
 splashWindow.add(text);
 splashWindow.show();
 
-// this function parses the groups that the user is a part of, and returns them
 var parseMachines = function(data){
   var machines = [];
   console.log('raw data: ' + data.contents);
@@ -70,11 +68,6 @@ var parseMachines = function(data){
 };
 
 
-// this is the ajax stuff
-// the main ajax block requests the GroupMe groups for the user, then shows them
-// when the user hits the select button, it launches another ajax block which:
-// requests the messages from the API for that group and displays them.
-// when the user hits the select button, it opens a new card with the full name and message. 
 var ajax = require('ajax');
 ajax(
   {
